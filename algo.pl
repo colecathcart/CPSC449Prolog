@@ -1,3 +1,6 @@
+
+%algorithm functions
+
 perm([],[]).
 
 perm(L,[H|T]) :-
@@ -99,3 +102,24 @@ pencalc(Og,[H|T],Tns,Mp,Track,Result) :-
     pencalc(Og,T,Tns,Mp,Y,Result).
     
 
+    
+    
+%IO functions
+
+writefile(File, Txt) :-
+    open(File, write, Stream),
+    write(Stream, Txt), nl,
+    close(Stream).
+    
+readfile(File) :-
+    open(File, read, Stream),
+    get_char(Stream, C1),
+    processstream(C1, Stream),
+    close(Stream).
+    
+processstream(end_of_file,_) :- !.
+
+processstream(C, Stream) :-
+    write(C),
+    get_char(Stream, C2),
+    processstream(C2, Stream).
