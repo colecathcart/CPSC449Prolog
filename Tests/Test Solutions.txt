@@ -13,7 +13,7 @@ asymmetrical.txt           Solution A B C D E F H G; Quality: 8
 toonearpen3.txt            Solution E F G H A D B C; Quality: 16
 
 
-input1.txt		Invalid Task
+input1.txt		Error while parsing input file
 input2.txt		Error while parsing input file
-input3.txt		invalid task
-test.txt		invalid task
+input3.txt		Error while parsing input file
+test.txt		Error while parsing input file
